@@ -20,12 +20,35 @@ fetch("assets/js/configtask.json")
         };
     });
 
+    
 document.getElementById('addtask').onclick = function createTask() {
         document.querySelector('#createTask').style.visibility = 'visible';
 };
 document.getElementById('validation').onclick = function validTask() {
     document.querySelector('#createTask').style.visibility = 'hidden';
 }
+
+let tableTask = [
+    {
+        name: "Manger",
+        time: "",
+        description: "Blablabla"
+
+    }
+]
+
+let inputName = document.getElementsByClassName('nom');
+let inputNameValue = inputName.value;
+
+const matache = {
+    name: inputNameValue
+}
+json.stringify(matache)
+
+
+
+
+
 
 
 

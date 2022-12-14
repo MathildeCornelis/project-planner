@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOUDOU</title>
-    <script defer src="./assets/js/script.js"></script>
+    <script defer src="./assets/js/main.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -14,6 +14,7 @@
         <h1> TOUDOU </h1>
         <button id="addtask" type="button"> <img src="" alt=""> </button>
         <button id="filtre" type="button"> <img src="" alt=""> </button>
+        <p class="test"></p>
 
     </header>
 
@@ -21,13 +22,25 @@
         <section id="createTask">
             <div class="popUpTask">
                 <input type="text" class="nom" placeholder="Nom de la tâche">
-                <textarea id="description" placeholder="Description"></textarea>
+                <textarea id="desc" placeholder="Description"></textarea>
                 <input type="date" class="date">
-                <button id="validation" type="button">Valider</button>
+                <button id="valid" type="button">Valider</button>
             </div>
         </section>
-
-
+        <div class="tout">
+            <div class="task">
+                <h2 class="name">Nom de la tâche</h2>
+                <p class="time">Date de fin</p>
+                <button class="arrow"><img src="" alt=""></button>
+                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quam quisquam animi laboriosam magni nesciunt dignissimos modi architecto non. Magni inventore iusto quia at accusamus ab laboriosam similique velit. Cumque?</p>
+                <button class="delete"> </button>
+            </div>
+        </div>
+        <select name="status-mode" id="status">
+            <option value="todo" selected>To Do</option>
+            <option value="doing">Doing</option>
+            <option value="done">Done</option>
+        </select>
     </main>
 <!--
     <footer>
