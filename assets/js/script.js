@@ -20,7 +20,7 @@
         };
     });*/
 
-    let Newtasks =[
+   /* let Newtasks =[
         {
             name:  "Manger",
             time:  "",
@@ -75,7 +75,7 @@ let inputNameValue = inputName.value;
 const matache = {
     name: inputNameValue
 }
-json.stringify(matache)
+json.stringify(matache) */
 
 
 

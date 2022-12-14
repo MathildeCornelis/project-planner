@@ -8,23 +8,38 @@ document.querySelector('#createTask').style.visibility = 'hidden';
 
 //quand on valide, les values des inputs s'ajoutent à l'écran
 
-    const buttonValid = document.getElementById('valid'); //btn validation    
-
-    const inputName = document.getElementsByClassName('nom');//input nom
-
-    const inputNameValue = inputName.value; //valeur input nom
-
-    const textArea = document.getElementById('desc');//textArea description
-
-    const textAreaValue = textArea.value; //valeur textArea description
-
-    const inputDate = document.getElementsByClassName('date'); // input date 
-
-    const inputDateValue = inputDate.value; //valeur input date
-
+    const buttonValid = document.getElementById('valid'); //btn validation  
     buttonValid.addEventListener('click', addTask);
 
     function addTask() {
+ 
+     
+
+    let inputName = document.getElementById('nom');//input nom
+
+    let inputNameValue = inputName.value; //valeur input nom
+
+        inputName.value = ""
+
+    let textArea = document.getElementById('desc');//textArea description
+
+    let textAreaValue = textArea.value; //valeur textArea description
+
+        textArea.value = ""
+
+    let inputDate = document.getElementById('date'); // input date 
+
+    let inputDateValue = inputDate.value; //valeur input date
+
+        inputDate.value = ""
+
+        if (textAreaValue == "" || inputDateValue == "" || inputNameValue == "")
+
+        {
+          
+        }
+
+        else {
         const tout = document.getElementsByClassName('tout');
         const divTask = document.createElement('div');
         divTask.classList.add("task");
@@ -56,4 +71,5 @@ document.querySelector('#createTask').style.visibility = 'hidden';
         divTask.appendChild(newDesc);
         divTask.appendChild(newDelete);
         tout[0].appendChild(divTask);
+        }
     };
