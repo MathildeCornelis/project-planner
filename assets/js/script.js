@@ -1,4 +1,4 @@
-fetch("assets/js/configtask.json")
+/*fetch("assets/js/configtask.json")
     .then((response) => response.json())
     .then((data) => { 
         for (let elements of data){
@@ -18,14 +18,47 @@ fetch("assets/js/configtask.json")
         `;
         document.querySelector("main").insertAdjacentHTML("beforeend", task);
         };
-    });
+    });*/
+
+    let Newtasks =[
+        {
+            name:  "Manger",
+            time:  "",
+            description :  "Blablabla"
+    
+        }
+    ]
+
+
 
 document.getElementById('addtask').onclick = function createTask() {
         document.querySelector('#createTask').style.visibility = 'visible';
 };
 document.getElementById('validation').onclick = function validTask() {
+
+    let Newtask = [ {
+
+        name:  "",
+        time:  "",
+        description :  ""
+    }
+
+    ]
+
+    let nom = document.getElementsByClassName('nom')
+    let description = document.getElementById('description')
+    let date = document.getElementById('date')
+
+    nom.value = Newtask.name;
+    description.value = Newtask.description
+
+    Newtasks.push(Newtask)
+
     document.querySelector('#createTask').style.visibility = 'hidden';
+    
+    console.log(Newtasks)
 }
+
 
 
 
