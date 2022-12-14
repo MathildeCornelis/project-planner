@@ -5,22 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOUDOU</title>
-    <script src="./assets/js/script.js"></script>
+    <script defer src="./assets/js/script.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
     <header>
         <h1> TOUDOU </h1>
-        <button id="addtask"> <img src="" alt=""> </button>
-        <button id="filtre"> <img src="" alt=""> </button>
+        <button id="addtask" type="button"> <img src="" alt=""> </button>
+        <button id="filtre" type="button"> <img src="" alt=""> </button>
+
     </header>
 
     <main>
-        
+        <section id="createTask">
+            <div class="popUpTask">
+                <input type="text" class="nom" placeholder="Nom de la tâche">
+                <textarea id="description" placeholder="Description"></textarea>
+                <input type="date" class="date">
+                <button id="validation" type="button">Valider</button>
+            </div>
+        </section>
 
 
     </main>
-
+<!--
     <footer>
         <div class="content">
             <div id="info">
@@ -40,6 +49,6 @@
 
 
     </footer>
-    
+    -->
 </body>
 </html>

@@ -21,19 +21,25 @@ fetch("assets/js/configtask.json")
     });
 
 document.getElementById('addtask').onclick = function createTask() {
-    let openPop = window.open("about:self", "hello", "width=20vw,height=20vw");
-    openPop.document.write("Hello, world!");
-    console.log(openPop);
-    let section = document.createElement('section'); 
-    section.id = "allNewTask";
-    let pName = document.createElement('textarea');
-    pName.id = "taskName";
-    let pDesc = document.createElement('textarea');
-    pDesc.id = "taskDesc";
-    let pTime = document.createElement('input');
-    pTime.id = "taskTime";
-    document.getElementById('taskTime').type = 'date';
-    section.appendChild("pName");
-    section.appendChild("pDesc");
-    section.appendChild("pTime");
+        document.querySelector('#createTask').style.visibility = 'visible';
 };
+document.getElementById('validation').onclick = function validTask() {
+    document.querySelector('#createTask').style.visibility = 'hidden';
+}
+
+
+
+// let openPop = window.open("_self", "hello", "width=80vw,height=80vw");
+        // openPop.document.write("Hello, world!");
+        // let section = document.createElement('section'); 
+        // section.id = "allNewTask";
+        // let pName = document.createElement('textarea');
+        // pName.id = "taskName";
+        // let pDesc = document.createElement('textarea');
+        // pDesc.id = "taskDesc";
+        // let pTime = document.createElement('input');
+        // pTime.id = "taskTime";
+        // document.getElementById('taskTime').type = 'date';
+        // section.appendChild("pName");
+        // section.appendChild("pDesc");
+        // section.appendChild("pTime");
