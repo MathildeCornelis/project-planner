@@ -1,9 +1,9 @@
 //cacher et faire apparaitre l'éditeur de tâche
 document.getElementById('addtask').onclick = function createTask() {
-    document.querySelector('#createTask').style.visibility = 'visible';
+    document.querySelector('#createTask').style.display = 'flex';
 };
 document.getElementById('valid').onclick = function validTask() {
-document.querySelector('#createTask').style.visibility = 'hidden';
+document.querySelector('#createTask').style.display = 'none';
 };
 
 
@@ -129,7 +129,7 @@ document.getElementById('aFaire').onclick = function () {
         }
         else {
             let task = document.getElementsByClassName('task');
-                task[i].style.display = 'flex'
+                task[i].style.display = 'grid'
         };     
     }
 };
@@ -145,7 +145,7 @@ document.getElementById('Fait').onclick = function () {
         }
         else {
             let task = document.getElementsByClassName('task');
-                task[i].style.display = 'flex'
+                task[i].style.display = 'grid'
         };     
     };
 };
@@ -162,7 +162,7 @@ document.getElementById('Fini').onclick = function () {
         }
         else {
             task = document.getElementsByClassName('task');
-                task[i].style.display = 'flex'
+                task[i].style.display = 'grid'
         };     
     };   
 };
