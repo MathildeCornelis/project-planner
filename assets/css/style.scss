@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap');
 
-body{
-    background-color:bisque;
+body {
+    background-color: bisque;
 
     header {
         display: grid;
         grid-template-columns: 20% 1fr 20%;
         grid-template-rows: 1fr;
         margin-bottom: 5vw;
+
         h1 {
             grid-area: 1 / 2 / 2 / 3;
             text-align: center;
@@ -15,34 +16,40 @@ body{
             font-size: 6vw;
 
         }
+
         #filtre {
             grid-area: 1 / 1 / 2 / 2;
             width: 16vw;
             height: auto;
+
             #imgbg {
                 width: 8vw;
                 height: auto;
             }
         }
+
         #addtask {
             grid-area: 1 / 3 / 2 / 4;
             width: 16vw;
             height: auto;
+
             #imgcross {
                 width: 10vw;
                 height: auto;
             }
-            
+
         }
 
-        
+
 
     }
-    main{
+
+    main {
         display: flex;
         justify-content: center;
         position: absolute;
-        #createTask{
+
+        #createTask {
             position: relative;
             right: 25vw;
             left: 25vw;
@@ -52,23 +59,28 @@ body{
             justify-content: center;
             width: 60%;
             background-color: blueviolet;
-            .popUpTask{
+
+            .popUpTask {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                .nom{
+
+                .nom {
                     margin-top: 5%;
                     width: 100%;
                 }
-                #description{
+
+                #description {
                     margin-top: 5%;
                     width: 100%;
                 }
-                .date{
+
+                .date {
                     margin-top: 5%;
                     width: 100%;
                 }
-                #validation{
+
+                #validation {
                     width: 40%;
                     height: 6vw;
                     margin-top: 5%;
@@ -79,6 +91,325 @@ body{
         .tout {
             display: flex;
             justify-content: center;
+            width: 110vw;
+            height: 90vw;
+            border-radius: 1vw;
+            background-color: rgb(238, 235, 234);
+            margin-left: -48vw;
+            margin-top: 20vw;
+
+            .name {
+                background-color: rgb(49, 88, 214);
+                width: 86vw;
+                justify-content: flex-start;
+
+            }
+
+            .contenu {
+                background-color: rgb(49, 88, 214);
+                width: 86vw;
+                height: 70vw;
+            }
+
+            .description {
+                margin-top: 15vw;
+            }
+
+            .arrow {
+                margin-left: 80vw;
+                top: -3vw;
+            }
+
+            .delete {
+                margin-left: 5vw;
+                margin-top: 28vw;
+
+            }
+
+            #status {
+                margin-left: 40vw;
+                margin-top: -5vw;
+
+            }
         }
     }
 }
+
+@media screen and (max-width: 800px) {
+    body {
+        display: flex;
+        justify-content: center;
+
+        header {
+            display: grid;
+            grid-template-columns: 20% 1fr 20%;
+            grid-template-rows: 1fr;
+            margin-bottom: 5vw;
+            margin-left: 5vw;
+
+            h1 {
+                grid-area: 1 / 2 / 2 / 3;
+                text-align: center;
+                font-family: 'Unbounded', cursive;
+                font-size: 6vw;
+
+            }
+
+            #filtre {
+                display: contents;
+                grid-area: 1 / 1 / 2 / 2;
+                width: 16vw;
+                height: auto;
+                margin-left: 0vw;
+
+                #imgbg {
+                        
+                    width: 8vw;
+                    height: auto;
+                }
+            }
+
+            #addtask {
+                
+                grid-area: 1 / 3 / 2 / 4;
+                width: 16vw;
+                height: auto;
+                margin-right: 40vw;
+
+                #imgcross {
+                    width: 10vw;
+                    height: auto;
+                }
+
+            }
+        }
+
+    }
+    main {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+
+        #createTask {
+            position: relative;
+            right: 25vw;
+            left: 25vw;
+            visibility: hidden;
+            border: solid black 2px;
+            display: flex;
+            justify-content: center;
+            width: 60%;
+            background-color: blueviolet;
+
+            .popUpTask {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .nom {
+                    margin-top: 5%;
+                    width: 100%;
+                }
+
+                #description {
+                    margin-top: 5%;
+                    width: 100%;
+                }
+
+                .date {
+                    margin-top: 5%;
+                    width: 100%;
+                }
+
+                #validation {
+                    width: 40%;
+                    height: 6vw;
+                    margin-top: 5%;
+                }
+            }
+        }
+
+        .tout {
+            display: flex;
+            justify-content: center;
+            width: 110vw;
+            height: 90vw;
+            border-radius: 1vw;
+            background-color: rgb(238, 235, 234);
+            margin-left: -48vw;
+            margin-top: 20vw;
+
+            .name {
+                background-color: rgb(49, 88, 214);
+                width: 86vw;
+                justify-content: flex-start;
+
+            }
+
+            .contenu {
+                background-color: rgb(49, 88, 214);
+                width: 86vw;
+                height: 70vw;
+            }
+
+            .description {
+                margin-top: 15vw;
+            }
+
+            .arrow {
+                margin-left: 80vw;
+                top: -3vw;
+            }
+
+            .delete {
+                margin-left: 5vw;
+                margin-top: 28vw;
+
+            }
+
+            #status {
+                margin-left: 40vw;
+                margin-top: -5vw;
+
+            }
+        }
+    }
+}
+
+
+@media screen and(max-width: 1026px) {
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+    h1 {
+        grid-area: 1 / 2 / 2 / 3;
+        text-align: center;
+        font-family: 'Unbounded', cursive;
+        font-size: 6vw;
+
+    }
+
+    #filtre {
+        display: none;
+        grid-area: 1 / 1 / 2 / 2;
+        width: 16vw;
+        height: auto;
+
+        #imgbg {
+            width: 8vw;
+            height: auto;
+        }
+    }
+
+    #addtask {
+        border: none;
+        background: none;
+        grid-area: 1 / 3 / 2 / 4;
+        width: 16vw;
+        height: auto;
+
+        #imgcross {
+            width: 10vw;
+            height: auto;
+        }
+
+    }
+    main {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+
+        #createTask {
+            position: relative;
+            right: 25vw;
+            left: 25vw;
+            visibility: hidden;
+            border: solid black 2px;
+            display: flex;
+            justify-content: center;
+            width: 60%;
+            background-color: blueviolet;
+
+            .popUpTask {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .nom {
+                    margin-top: 5%;
+                    width: 100%;
+                }
+
+                #description {
+                    margin-top: 5%;
+                    width: 100%;
+                }
+
+                .date {
+                    margin-top: 5%;
+                    width: 100%;
+                }
+
+                #validation {
+                    width: 40%;
+                    height: 6vw;
+                    margin-top: 5%;
+                }
+            }
+        }
+
+        .tout {
+            display: flex;
+            justify-content: center;
+            width: 110vw;
+            height: 90vw;
+            border-radius: 1vw;
+            background-color: rgb(238, 235, 234);
+            margin-left: -48vw;
+            margin-top: 20vw;
+
+            .name {
+                background-color: rgb(49, 88, 214);
+                width: 86vw;
+                justify-content: flex-start;
+
+            }
+
+            .contenu {
+                background-color: rgb(49, 88, 214);
+                width: 86vw;
+                height: 70vw;
+            }
+
+            .description {
+                margin-top: 15vw;
+            }
+
+            .arrow {
+                margin-left: 80vw;
+                top: -3vw;
+            }
+
+            .delete {
+                margin-left: 5vw;
+                margin-top: 28vw;
+
+            }
+
+            #status {
+                margin-left: 40vw;
+                margin-top: -5vw;
+
+            }
+        }
+    }
+}
+
+
