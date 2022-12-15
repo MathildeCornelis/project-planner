@@ -12,8 +12,6 @@ document.querySelector('#createTask').style.visibility = 'hidden';
     buttonValid.addEventListener('click', addTask);
 
     function addTask() {
- 
-     
 
     let inputName = document.getElementById('nom');//input nom
 
@@ -36,7 +34,7 @@ document.querySelector('#createTask').style.visibility = 'hidden';
         if (textAreaValue == "" || inputDateValue == "" || inputNameValue == "")
 
         {
-          
+            
         }
 
         else {
@@ -64,12 +62,32 @@ document.querySelector('#createTask').style.visibility = 'hidden';
         const newDelete = document.createElement('button');
         newDelete.classList.add('delete');
 
+        const newSelect = document.createElement('select');
+        newSelect.id = "status";
+
+        const newOption1 = document.createElement('option');
+        newOption1.value = 'todo';
+        newOption1.innerText = 'To Do';
+
+        const newOption2 = document.createElement('option');
+        newOption2.value = 'doing';
+        newOption2.innerText = 'Doing';
+
+        const newOption3 = document.createElement('option');
+        newOption3.value = 'done';
+        newOption3.innerText = 'Done';
+
+        newSelect.appendChild(newOption1);
+        newSelect.appendChild(newOption2);
+        newSelect.appendChild(newOption3);
+
         
         divTask.appendChild(newh2);
         divTask.appendChild(newDate);
         divTask.appendChild(newArrow);
         divTask.appendChild(newDesc);
         divTask.appendChild(newDelete);
+        divTask.appendChild(newSelect);
         tout[0].appendChild(divTask);
         }
     };
