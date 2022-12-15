@@ -73,4 +73,260 @@ body main #createTask .popUpTask #validation {
 body main .tout {
   display: flex;
   justify-content: center;
+  width: 110vw;
+  height: 90vw;
+  border-radius: 1vw;
+  background-color: rgb(238, 235, 234);
+  margin-left: -48vw;
+  margin-top: 20vw;
+}
+body main .tout .name {
+  background-color: rgb(49, 88, 214);
+  width: 86vw;
+  justify-content: flex-start;
+}
+body main .tout .contenu {
+  background-color: rgb(49, 88, 214);
+  width: 86vw;
+  height: 70vw;
+}
+body main .tout .description {
+  margin-top: 15vw;
+}
+body main .tout .arrow {
+  margin-left: 80vw;
+  top: -3vw;
+}
+body main .tout .delete {
+  margin-left: 5vw;
+  margin-top: 28vw;
+}
+body main .tout #status {
+  margin-left: 40vw;
+  margin-top: -5vw;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  body header {
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 1fr;
+    margin-bottom: 5vw;
+    margin-left: 5vw;
+  }
+  body header h1 {
+    grid-area: 1/2/2/3;
+    text-align: center;
+    font-family: "Unbounded", cursive;
+    font-size: 6vw;
+  }
+  body header #filtre {
+    display: contents;
+    grid-area: 1/1/2/2;
+    width: 16vw;
+    height: auto;
+    margin-left: 0vw;
+  }
+  body header #filtre #imgbg {
+    width: 8vw;
+    height: auto;
+  }
+  body header #addtask {
+    grid-area: 1/3/2/4;
+    width: 16vw;
+    height: auto;
+    margin-right: 40vw;
+  }
+  body header #addtask #imgcross {
+    width: 10vw;
+    height: auto;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+  }
+  main #createTask {
+    position: relative;
+    right: 25vw;
+    left: 25vw;
+    visibility: hidden;
+    border: solid black 2px;
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    background-color: blueviolet;
+  }
+  main #createTask .popUpTask {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main #createTask .popUpTask .nom {
+    margin-top: 5%;
+    width: 100%;
+  }
+  main #createTask .popUpTask #description {
+    margin-top: 5%;
+    width: 100%;
+  }
+  main #createTask .popUpTask .date {
+    margin-top: 5%;
+    width: 100%;
+  }
+  main #createTask .popUpTask #validation {
+    width: 40%;
+    height: 6vw;
+    margin-top: 5%;
+  }
+  main .tout {
+    display: flex;
+    justify-content: center;
+    width: 110vw;
+    height: 90vw;
+    border-radius: 1vw;
+    background-color: rgb(238, 235, 234);
+    margin-left: -48vw;
+    margin-top: 20vw;
+  }
+  main .tout .name {
+    background-color: rgb(49, 88, 214);
+    width: 86vw;
+    justify-content: flex-start;
+  }
+  main .tout .contenu {
+    background-color: rgb(49, 88, 214);
+    width: 86vw;
+    height: 70vw;
+  }
+  main .tout .description {
+    margin-top: 15vw;
+  }
+  main .tout .arrow {
+    margin-left: 80vw;
+    top: -3vw;
+  }
+  main .tout .delete {
+    margin-left: 5vw;
+    margin-top: 28vw;
+  }
+  main .tout #status {
+    margin-left: 40vw;
+    margin-top: -5vw;
+  }
+}
+@media screen and (max-width: 1026px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+  h1 {
+    grid-area: 1/2/2/3;
+    text-align: center;
+    font-family: "Unbounded", cursive;
+    font-size: 6vw;
+  }
+  #filtre {
+    display: none;
+    grid-area: 1/1/2/2;
+    width: 16vw;
+    height: auto;
+  }
+  #filtre #imgbg {
+    width: 8vw;
+    height: auto;
+  }
+  #addtask {
+    border: none;
+    background: none;
+    grid-area: 1/3/2/4;
+    width: 16vw;
+    height: auto;
+  }
+  #addtask #imgcross {
+    width: 10vw;
+    height: auto;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+  }
+  main #createTask {
+    position: relative;
+    right: 25vw;
+    left: 25vw;
+    visibility: hidden;
+    border: solid black 2px;
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    background-color: blueviolet;
+  }
+  main #createTask .popUpTask {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main #createTask .popUpTask .nom {
+    margin-top: 5%;
+    width: 100%;
+  }
+  main #createTask .popUpTask #description {
+    margin-top: 5%;
+    width: 100%;
+  }
+  main #createTask .popUpTask .date {
+    margin-top: 5%;
+    width: 100%;
+  }
+  main #createTask .popUpTask #validation {
+    width: 40%;
+    height: 6vw;
+    margin-top: 5%;
+  }
+  main .tout {
+    display: flex;
+    justify-content: center;
+    width: 110vw;
+    height: 90vw;
+    border-radius: 1vw;
+    background-color: rgb(238, 235, 234);
+    margin-left: -48vw;
+    margin-top: 20vw;
+  }
+  main .tout .name {
+    background-color: rgb(49, 88, 214);
+    width: 86vw;
+    justify-content: flex-start;
+  }
+  main .tout .contenu {
+    background-color: rgb(49, 88, 214);
+    width: 86vw;
+    height: 70vw;
+  }
+  main .tout .description {
+    margin-top: 15vw;
+  }
+  main .tout .arrow {
+    margin-left: 80vw;
+    top: -3vw;
+  }
+  main .tout .delete {
+    margin-left: 5vw;
+    margin-top: 28vw;
+  }
+  main .tout #status {
+    margin-left: 40vw;
+    margin-top: -5vw;
+  }
 }/*# sourceMappingURL=style.css.map */
