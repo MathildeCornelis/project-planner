@@ -4,22 +4,30 @@ body {
 }
 body header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  margin-bottom: 5vw;
 }
 body header h1 {
   text-align: center;
   font-family: "Unbounded", cursive;
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 body main {
   display: flex;
   justify-content: center;
+  position: absolute;
 }
 body main #createTask {
+  position: relative;
+  right: 25vw;
+  left: 25vw;
   visibility: hidden;
   border: solid black 2px;
   display: flex;
   justify-content: center;
   width: 60%;
+  background-color: blueviolet;
 }
 body main #createTask .popUpTask {
   display: flex;
