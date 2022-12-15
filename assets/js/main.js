@@ -166,21 +166,3 @@ document.getElementById('Fini').onclick = function () {
         };     
     };   
 };
-
-// document.getElementById('alphabetique').onclick = function () {
-//     let done = document.getElementsByClassName('status'); 
-//     let task
-//     for (i=0; i < done.length; i++ ) {
-//         let doneValue = done[i].value;
-//         console.log(doneValue != 'done')
-//         if (doneValue != 'done') {
-//             task = document.getElementsByClassName('task');
-//         console.log(task[i])
-//                 task[i].style.display = 'none'
-//         }
-//         else {
-//             task = document.getElementsByClassName('task');
-//                 task[i].style.display = 'flex'
-//         };     
-//     };   
-// };
