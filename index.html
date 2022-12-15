@@ -11,7 +11,15 @@
 <body>
 
     <header>
-        <button id="filtre" type="button"> <img id="imgbg" src="/assets/img/burgermenu.png" alt="Menu"> </button>
+        <button id="filtre" type="button"> <img id="imgbg" src="/assets/img/burgermenu.png" alt="Menu">
+            <div id="triePar">
+                <button id="alphabetique">Par nom</button>
+                <button id="urgent">Par importance</button>
+                <button id="aFaire">To do</button>
+                <button id="Fait">Doing</button>
+                <button id="Fini">Done</button>
+            </div>
+        </button>
         <h1> TOUDOU </h1>
         <button id="addtask" type="button"> <img id="imgcross" src="/assets/img/addtask.png" alt="cross"> </button>
         
@@ -25,11 +33,6 @@
                 <input type="text" id="nom" placeholder="Nom de la tâche">
                 <textarea id="desc" placeholder="Description"></textarea>
                 <input type="date" id="date">
-                <select name="status-mode" id="status">
-                    <option value="todo" selected>To Do</option>
-                    <option value="doing">Doing</option>
-                    <option value="done">Done</option>
-                </select>
                 <button id="valid" type="button">Valider</button>
             </div>
         </section>
@@ -40,7 +43,7 @@
                 <button class="arrow"><img src="" alt=""></button>
                 <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore quam quisquam animi laboriosam magni nesciunt dignissimos modi architecto non. Magni inventore iusto quia at accusamus ab laboriosam similique velit. Cumque?</p>
                 <button class="delete"> </button>
-                <select name="status-mode" id="status">
+                <select name="status-mode" class="status">
                     <option value="todo" selected>To Do</option>
                     <option value="doing">Doing</option>
                     <option value="done">Done</option>
