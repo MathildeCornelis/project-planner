@@ -3,15 +3,34 @@ body {
   background-color: bisque;
 }
 body header {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 20% 1fr 20%;
+  grid-template-rows: 1fr;
   margin-bottom: 5vw;
 }
 body header h1 {
+  grid-area: 1/2/2/3;
   text-align: center;
   font-family: "Unbounded", cursive;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  font-size: 6vw;
+}
+body header #filtre {
+  grid-area: 1/1/2/2;
+  width: 16vw;
+  height: auto;
+}
+body header #filtre #imgbg {
+  width: 8vw;
+  height: auto;
+}
+body header #addtask {
+  grid-area: 1/3/2/4;
+  width: 16vw;
+  height: auto;
+}
+body header #addtask #imgcross {
+  width: 10vw;
+  height: auto;
 }
 body main {
   display: flex;
@@ -50,4 +69,8 @@ body main #createTask .popUpTask #validation {
   width: 40%;
   height: 6vw;
   margin-top: 5%;
+}
+body main .tout {
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
