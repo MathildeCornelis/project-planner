@@ -170,7 +170,7 @@ document.getElementById('aFaire').onclick = function () {
         }
         else {
             let task = document.getElementsByClassName('task');
-                task[i].style.display = 'grid'
+                task[i].style.display = 'block'
         };     
     }
 };
@@ -185,7 +185,7 @@ document.getElementById('Fait').onclick = function () {
         }
         else {
             let task = document.getElementsByClassName('task');
-                task[i].style.display = 'grid'
+                task[i].style.display = 'block'
         };     
     };
 };
@@ -202,7 +202,7 @@ document.getElementById('Fini').onclick = function () {
         }
         else {
             task = document.getElementsByClassName('task');
-                task[i].style.display = 'grid'
+                task[i].style.display = 'block'
         };     
     };   
 };
