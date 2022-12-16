@@ -162,8 +162,16 @@ document.querySelector('#createTask').style.display = 'none';
         if (( Math.floor((result - today.getTime())/ (1000 * 60 * 60 *24))) >= 1)
         {
         taskTime = 'Il reste ' +(( Math.floor((result - today.getTime()) / (1000 * 60 * 60 *24))) + 1) + ' jours';}
-            else {
+            else if (( Math.floor((result - today.getTime())/ (1000 * 60 * 60 *24))) < 1 && ( Math.floor((result - today.getTime())/ (1000 * 60 * 60 *24))) >= 0) {
             taskTime = "Demain"}
+            
+            else if (( Math.floor((result - today.getTime())/ (1000 * 60 * 60 *24))) < 0 && ( Math.floor((result - today.getTime())/ (1000 * 60 * 60 *24))) >= -1) {
+                taskTime = "Aujourd'hui"
+            }
+
+            else {
+                taskTime = "Fini"
+            }
 
             console.log(( Math.floor((result - today.getTime()) / (1000 * 60 * 60 *24))));
         return taskTime;
@@ -237,18 +245,28 @@ document.getElementById('filtre').onclick = function createTask() {
     // let uniqueId = document.getElementById('id', Date.now());
     // console.log(uniqueId);
 
-    document.getElementsByClassName('delete').onclick = function () {
-        let uniqueId = document.getElementById('')
+    window.onload= function del () {
+        let click = document.getElementsByClassName('delete')
+        for (let i = 0; i < click.length; i++){
+            let clicks  =  click[i];
+            clicks.onclick = function() {
+            let remov = document.getElementsByClassName('task')
+            for (let x = 0 ; x < remov.length; x++ ) {
+                console.log('test')
+            let removs = remov[x];
+            
+            if (i == x)
+            removs.style.display = 'none'
         
-    };
+
+            }
+
+        
+        }
+           
+
+        }
 
 
-    function deleteItem(event) {
-        const tout = document.getElementsByClassName('tout');
-        const trashBtn = event.target;
-        const divTask = trashBtn.parentNode;
-        tout.removeChild(divTask);
-        const cleanStorage = lists.filter(toDo => toDo.id !== +li.id);
-        lists = cleanStorage;
-        
-      }
+        setTimeout(del , 1000)
+    }
