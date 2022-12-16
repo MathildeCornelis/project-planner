@@ -12,7 +12,12 @@ body {
         grid-template-columns: 20% 1fr 16%;
         grid-template-rows: 1fr;
         margin-bottom: 5vw;
+        
         z-index: 1;
+
+
+       
+     
       
 
         h1 {
@@ -23,11 +28,46 @@ body {
 
         }
 
+        #trie { 
+            visibility: hidden;
+            z-index: 1;
+           margin-left: 2vw;
+           margin-top: 2vh;
+
+            
+            #aFaire {
+                font-family: 'Secular One' , sans-serif;
+                font-size: 5vw;
+                width: 45vw;
+                border-top-left-radius: 35%;
+                border-top-right-radius: 35%;
+                
+              }
+              #Fait {
+                font-family: 'Secular One' , sans-serif;
+                font-size: 5vw;
+                width: 45vw;
+               
+              }
+              #Fini {
+                font-family: 'Secular One' , sans-serif;
+                font-size: 5vw;
+                width: 45vw;
+                border-bottom-left-radius: 35%;
+                border-bottom-right-radius: 35%;
+               
+              }
+        }
+
         #filtre {
             grid-area: 1 / 1 / 2 / 2;
             width: 16vw;
             height: auto;
             background-color: #cadefc;
+            border-radius: 50%;
+            border: none;
+
+           
 
             #imgbg {
                 width: 8vw;
@@ -39,6 +79,8 @@ body {
             
             grid-area: 1 / 3 / 2 / 4;
             background-color: #cadefc;
+            border-radius: 50%;
+            border: none;
             width: 16vw;
             height: auto;
 
@@ -139,7 +181,7 @@ body {
                 .arrow {
                     background-color: #fdffcd ;
                     border: none;
-                    width: 10vw;
+                    width: 15%;
                     margin-left: 8vw;
                     
                     #plus {

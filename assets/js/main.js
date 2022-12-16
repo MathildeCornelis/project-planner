@@ -166,3 +166,17 @@ document.getElementById('Fini').onclick = function () {
         };     
     };   
 };
+
+
+
+document.getElementById('filtre').onclick = function createTask() {
+    let menu = document.querySelector('#trie')
+    
+    if ( menu.style.visibility == 'hidden') {
+        menu.style.visibility = 'visible'
+    }
+    else {
+        menu.style.visibility = 'hidden'
+    }
+
+};
