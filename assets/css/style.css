@@ -7,12 +7,17 @@ body {
 }
 body header {
   grid-area: 1/1/2/2;
-  height: 1vh;
   display: grid;
   grid-template-columns: 20% 1fr 16%;
   grid-template-rows: 1fr;
   margin-bottom: 5vw;
   z-index: 1;
+}
+@media screen and (min-width: 1280px) {
+  body header {
+    grid-template-rows: 15vh;
+    margin-bottom: 0;
+  }
 }
 body header h1 {
   grid-area: 1/2/2/3;
@@ -22,28 +27,60 @@ body header h1 {
 }
 body header #trie {
   visibility: hidden;
-  z-index: 1;
-  margin-left: 2vw;
-  margin-top: 2vh;
+}
+@media screen and (min-width: 1280px) {
+  body header #trie {
+    margin-left: 25%;
+    margin-bottom: 10%;
+  }
 }
 body header #trie #aFaire {
   font-family: "Secular One", sans-serif;
   font-size: 5vw;
   width: 45vw;
-  border-top-left-radius: 35%;
-  border-top-right-radius: 35%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #fdffcd;
+  border: none;
+  border-bottom: solid 1px #b0afaf;
+}
+@media screen and (min-width: 1280px) {
+  body header #trie #aFaire {
+    width: 10vw;
+    height: 3vw;
+    font-size: 2vw;
+  }
 }
 body header #trie #Fait {
   font-family: "Secular One", sans-serif;
   font-size: 5vw;
   width: 45vw;
+  background-color: #fdffcd;
+  border: none;
+  border-bottom: solid 1px #b0afaf;
+}
+@media screen and (min-width: 1280px) {
+  body header #trie #Fait {
+    width: 10vw;
+    height: 3vw;
+    font-size: 2vw;
+  }
 }
 body header #trie #Fini {
   font-family: "Secular One", sans-serif;
   font-size: 5vw;
   width: 45vw;
-  border-bottom-left-radius: 35%;
-  border-bottom-right-radius: 35%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #fdffcd;
+  border: none;
+}
+@media screen and (min-width: 1280px) {
+  body header #trie #Fini {
+    width: 10vw;
+    height: 3vw;
+    font-size: 2vw;
+  }
 }
 body header #filtre {
   grid-area: 1/1/2/2;
@@ -53,9 +90,23 @@ body header #filtre {
   border-radius: 50%;
   border: none;
 }
+@media screen and (min-width: 1280px) {
+  body header #filtre {
+    width: 5vw;
+    height: 8vh;
+    margin-left: 35%;
+    margin-top: 15%;
+  }
+}
 body header #filtre #imgbg {
   width: 8vw;
   height: auto;
+}
+@media screen and (min-width: 1280px) {
+  body header #filtre #imgbg {
+    width: 3vw;
+    height: auto;
+  }
 }
 body header #addtask {
   grid-area: 1/3/2/4;
@@ -65,22 +116,44 @@ body header #addtask {
   width: 16vw;
   height: auto;
 }
+@media screen and (min-width: 1280px) {
+  body header #addtask {
+    width: 5vw;
+    height: 8vh;
+    margin-top: 20%;
+    margin-left: 25%;
+  }
+}
 body header #addtask #imgcross {
   width: 10vw;
   height: auto;
+}
+@media screen and (min-width: 1280px) {
+  body header #addtask #imgcross {
+    width: 3vw;
+    height: auto;
+  }
 }
 body main {
   grid-area: 2/1/3/2;
   font-family: "Secular One", sans-serif;
 }
+@media screen and (min-width: 1280px) {
+  body main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 body main #createTask {
+  z-index: 1;
   position: absolute;
-  top: 30vw;
+  top: 40vw;
   right: 30vw;
   left: 20vw;
   display: none;
   border: solid black 2px;
-  border-radius: 20%;
+  border-radius: 20px;
   box-shadow: 1vw 1vw 3vw 1vw #000000;
   justify-content: center;
   width: 60%;
@@ -98,32 +171,48 @@ body main #createTask .popUpTask #nom {
   height: 3vh;
   width: 40vw;
   font-family: "Secular One", sans-serif;
+  border: none;
 }
 body main #createTask .popUpTask #desc {
   width: 40vw;
   height: 10vh;
   font-family: "Secular One", sans-serif;
+  border: none;
 }
 body main #createTask .popUpTask #date {
   margin-top: 5vh;
   width: 40vw;
   margin-bottom: 5vh;
   font-family: "Secular One", sans-serif;
+  border: none;
 }
 body main #createTask .popUpTask #valid {
   width: 15vh;
   height: 6vw;
+  border-radius: 5px;
   background-color: #defcf9;
   font-family: "Secular One", sans-serif;
 }
-body main .tout {
-  margin-top: 25vw;
+@media screen and (min-width: 1280px) {
+  body main .tout {
+    width: 33%;
+  }
 }
 body main .tout .task {
   background-color: #fdffcd;
-  border-radius: 25%;
+  border-radius: 20px;
   padding: 7vw;
   margin: 5vw;
+}
+@media screen and (min-width: 1280px) {
+  body main .tout .task {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+body main .tout .task .description {
+  display: none;
 }
 body main .tout .task .delete {
   background-color: #fdffcd;
@@ -138,6 +227,12 @@ body main .tout .task .status {
   margin-left: 7vw;
   margin-right: 4vw;
   font-family: "Secular One", sans-serif;
+  border: none;
+}
+@media screen and (min-width: 1280px) {
+  body main .tout .task .status {
+    width: 100%;
+  }
 }
 body main .tout .task .arrow {
   background-color: #fdffcd;
@@ -148,6 +243,30 @@ body main .tout .task .arrow {
 body main .tout .task .arrow #plus {
   width: 75%;
   height: auto;
+}
+body footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "Unbounded", cursive;
+}
+body footer .content #info #mail {
+  font-size: 3vw;
+}
+body footer .content #info #mail:hover {
+  color: #fdffcd;
+}
+body footer .content #info #phone {
+  font-size: 3vw;
+}
+body footer .content #info #phone:hover {
+  color: #fdffcd;
+}
+body footer .content #RS #facebook img {
+  width: 8vw;
+}
+body footer .content #RS #insta img {
+  width: 8vw;
 }
 
 /*@media screen and (max-width: 800px) {

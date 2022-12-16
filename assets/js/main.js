@@ -1,12 +1,33 @@
+// document.getElementsByClassName('arrow').onclick = function showDesc() {
+//     let desc = document.getElementsByClassName('description');
+    
+//     if ( desc.style.display == 'none') {
+//         desc.style.display = 'flex'
+//     }
+//     else {
+//         desc.style.display = 'none'
+//     };
+// };
+
+
+
+
+
+
 //cacher et faire apparaitre l'éditeur de tâche
 document.getElementById('addtask').onclick = function createTask() {
-    document.querySelector('#createTask').style.display = 'flex';
+    let createTask = document.querySelector('#createTask')
+    
+    if ( createTask.style.display == 'none') {
+        createTask.style.display = 'flex'
+    }
+    else {
+        createTask.style.display = 'none'}
+
 };
 document.getElementById('valid').onclick = function validTask() {
 document.querySelector('#createTask').style.display = 'none';
 };
-
-
 
 
 //quand on valide, les values des inputs s'ajoutent à l'écran
@@ -56,6 +77,8 @@ document.querySelector('#createTask').style.display = 'none';
         const newArrow = document.createElement('button');
         newArrow.classList.add("arrow");
         const imgNewArrow = document.createElement('img');
+        imgNewArrow.src = "/assets/img/arrow.png";
+        imgNewArrow.id=('plus');
         newArrow.appendChild(imgNewArrow);
         
 
@@ -65,6 +88,10 @@ document.querySelector('#createTask').style.display = 'none';
 
         const newDelete = document.createElement('button');
         newDelete.classList.add('delete');
+        const newImageDelete = document.createElement('img');
+        newImageDelete.src = "/assets/img/poubelle.png";
+        newImageDelete.id=('poubelle');
+        newDelete.appendChild(newImageDelete);
 
         const newSelect = document.createElement('select');
         newSelect.classList.add("status");
@@ -87,13 +114,19 @@ document.querySelector('#createTask').style.display = 'none';
 
         divTask.appendChild(newh2);
         divTask.appendChild(newDate);
-        divTask.appendChild(newArrow);
         divTask.appendChild(newDesc);
         divTask.appendChild(newDelete);
         divTask.appendChild(newSelect);
+        divTask.appendChild(newArrow);
         tout[0].appendChild(divTask);
+        
+        // créer un id unique à div.task
+        const uniqueId = divTask.setAttribute('id', Date.now());
+        
         }
     };
+
+// initialiser les filtres
 
     function tempsRestant() {
         let today = new Date ();
@@ -111,8 +144,16 @@ document.querySelector('#createTask').style.display = 'none';
         if (( Math.floor((result - today.getTime())/ (1000 * 60 * 60 *24))) >= 1)
         {
         taskTime = 'Il reste ' +(( Math.floor((result - today.getTime()) / (1000 * 60 * 60 *24))) + 1) + ' jours';}
-            else {
+            else if (( Math.floor((result - today.getTime())/ (1000 * 60 * 60 *24))) < 1 && ( Math.floor((result - today.getTime())/ (1000 * 60 * 60 *24))) >= 0) {
             taskTime = "Demain"}
+            
+            else if (( Math.floor((result - today.getTime())/ (1000 * 60 * 60 *24))) < 0 && ( Math.floor((result - today.getTime())/ (1000 * 60 * 60 *24))) >= -1) {
+                taskTime = "Aujourd'hui"
+            }
+
+            else {
+                taskTime = "Fini"
+            }
 
             console.log(( Math.floor((result - today.getTime()) / (1000 * 60 * 60 *24))));
         return taskTime;
@@ -130,7 +171,7 @@ document.getElementById('aFaire').onclick = function () {
         }
         else {
             let task = document.getElementsByClassName('task');
-                task[i].style.display = 'grid'
+                task[i].style.display = 'block'
         };     
     }
 };
@@ -138,7 +179,6 @@ document.getElementById('Fait').onclick = function () {
     let done = document.getElementsByClassName('status'); 
     for (i=0; i < done.length; i++ ) {
         let doneValue = done[i].value;
-        console.log('test')
         if (doneValue != 'doing') {
             let task = document.getElementsByClassName('task');
 
@@ -146,7 +186,7 @@ document.getElementById('Fait').onclick = function () {
         }
         else {
             let task = document.getElementsByClassName('task');
-                task[i].style.display = 'grid'
+                task[i].style.display = 'block'
         };     
     };
 };
@@ -163,12 +203,12 @@ document.getElementById('Fini').onclick = function () {
         }
         else {
             task = document.getElementsByClassName('task');
-                task[i].style.display = 'grid'
+                task[i].style.display = 'block'
         };     
     };   
 };
 
-
+//rendre visible, invisible les filtres
 
 document.getElementById('filtre').onclick = function createTask() {
     let menu = document.querySelector('#trie')
@@ -181,3 +221,53 @@ document.getElementById('filtre').onclick = function createTask() {
     }
 
 };
+
+//supprimer tâche quand on clique sut la poubelle
+    
+    // let uniqueId = document.getElementById('id', Date.now());
+    // console.log(uniqueId);
+
+
+    window.addEventListener('load', function showDesc () {
+    
+        let click = document.getElementsByClassName('arrow');
+        for (let i = 0; i < click.length; i++){
+            let clicks  =  click[i];
+            clicks.onclick = function() {
+                let desc = document.getElementsByClassName('description');
+                for (let x=0; x < desc.length; x++){
+                    console.log('test');
+                    let descs = desc[x];
+                    if(i == x) {
+                    descs.style.display='flex'}
+                    else if (i != x){
+                        descs.style.display='none'
+                    }
+                }
+            }
+        }
+        setTimeout(showDesc, 1000)
+    });
+
+
+
+    window.onload= function del () {
+        let click = document.getElementsByClassName('delete')
+        for (let i = 0; i < click.length; i++){
+            let clicks  =  click[i];
+            clicks.onclick = function() {
+            let remov = document.getElementsByClassName('task')
+            for (let x = 0 ; x < remov.length; x++ ) {
+                console.log('test')
+            let removs = remov[x];
+            
+            if (i == x)
+            removs.remove()
+            }
+        }
+        }
+    
+    
+        setTimeout(del , 1000)
+    }
+    
