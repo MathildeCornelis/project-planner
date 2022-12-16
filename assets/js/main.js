@@ -56,6 +56,8 @@ document.querySelector('#createTask').style.display = 'none';
         const newArrow = document.createElement('button');
         newArrow.classList.add("arrow");
         const imgNewArrow = document.createElement('img');
+        imgNewArrow.src = "/assets/img/arrow.png";
+        imgNewArrow.id=('plus');
         newArrow.appendChild(imgNewArrow);
 
         const newDesc = document.createElement('p');
@@ -64,6 +66,10 @@ document.querySelector('#createTask').style.display = 'none';
 
         const newDelete = document.createElement('button');
         newDelete.classList.add('delete');
+        const newImageDelete = document.createElement('img');
+        newImageDelete.src = "/assets/img/poubelle.png";
+        newImageDelete.id=('poubelle');
+        newDelete.appendChild(newImageDelete);
 
         const newSelect = document.createElement('select');
         newSelect.classList.add("status");
@@ -86,13 +92,18 @@ document.querySelector('#createTask').style.display = 'none';
 
         divTask.appendChild(newh2);
         divTask.appendChild(newDate);
-        divTask.appendChild(newArrow);
         divTask.appendChild(newDesc);
         divTask.appendChild(newDelete);
         divTask.appendChild(newSelect);
+        divTask.appendChild(newArrow);
         tout[0].appendChild(divTask);
+        
+        // créer un id unique à div.task
+        divTask.setAttribute('id', Date.now());
         }
     };
+
+// initialiser les filtres
 
     function tempsRestant() {
         let today = new Date ();
@@ -137,7 +148,6 @@ document.getElementById('Fait').onclick = function () {
     let done = document.getElementsByClassName('status'); 
     for (i=0; i < done.length; i++ ) {
         let doneValue = done[i].value;
-        console.log('test')
         if (doneValue != 'doing') {
             let task = document.getElementsByClassName('task');
 
@@ -167,7 +177,7 @@ document.getElementById('Fini').onclick = function () {
     };   
 };
 
-
+//rendre visible, invisible les filtres
 
 document.getElementById('filtre').onclick = function createTask() {
     let menu = document.querySelector('#trie')
@@ -180,3 +190,11 @@ document.getElementById('filtre').onclick = function createTask() {
     }
 
 };
+
+//supprimer tâche quand on clique sut la poubelle
+    
+    
+    document.getElementsByClassName('delete').onclick = function () {
+        
+        
+    };

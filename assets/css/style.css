@@ -22,7 +22,6 @@ body header h1 {
 }
 body header #trie {
   visibility: hidden;
-  z-index: 1;
   margin-left: 2vw;
   margin-top: 2vh;
 }
@@ -74,6 +73,7 @@ body main {
   font-family: "Secular One", sans-serif;
 }
 body main #createTask {
+  z-index: 1;
   position: absolute;
   top: 30vw;
   right: 30vw;
