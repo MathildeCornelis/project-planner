@@ -107,7 +107,9 @@ document.querySelector('#createTask').style.display = 'none';
         tout[0].appendChild(divTask);
         
         // créer un id unique à div.task
-        return divTask.setAttribute('id', Date.now());
+        const uniqueId = divTask.setAttribute('id', Date.now());
+        constuniqueIdValue = uniqueId.value;
+        console.log('test');
         }
     };
 
@@ -201,8 +203,21 @@ document.getElementById('filtre').onclick = function createTask() {
 
 //supprimer tâche quand on clique sut la poubelle
     
-    
+    // let uniqueId = document.getElementById('id', Date.now());
+    // console.log(uniqueId);
+
     document.getElementsByClassName('delete').onclick = function () {
-        const element = divTask.setAttribute('id', Date.now());
-        element.remove();
+        let uniqueId = document.getElementById('')
+        
     };
+
+
+    function deleteItem(event) {
+        const tout = document.getElementsByClassName('tout');
+        const trashBtn = event.target;
+        const divTask = trashBtn.parentNode;
+        tout.removeChild(divTask);
+        const cleanStorage = lists.filter(toDo => toDo.id !== +li.id);
+        lists = cleanStorage;
+        
+      }
