@@ -57,6 +57,7 @@ document.querySelector('#createTask').style.display = 'none';
         newArrow.classList.add("arrow");
         const imgNewArrow = document.createElement('img');
         newArrow.appendChild(imgNewArrow);
+        
 
         const newDesc = document.createElement('p');
         newDesc.classList.add('description');
