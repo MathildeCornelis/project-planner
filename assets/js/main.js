@@ -17,6 +17,7 @@ document.querySelector('#createTask').style.display = 'none';
 
 
 
+
 //quand on valide, les values des inputs s'ajoutent à l'écran
 
     const buttonValid = document.getElementById('valid'); //btn validation  
