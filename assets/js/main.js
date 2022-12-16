@@ -107,7 +107,7 @@ document.querySelector('#createTask').style.display = 'none';
         tout[0].appendChild(divTask);
         
         // créer un id unique à div.task
-        divTask.setAttribute('id', Date.now());
+        return divTask.setAttribute('id', Date.now());
         }
     };
 
@@ -203,6 +203,6 @@ document.getElementById('filtre').onclick = function createTask() {
     
     
     document.getElementsByClassName('delete').onclick = function () {
-        
-        
+        const element = divTask.setAttribute('id', Date.now());
+        element.remove();
     };
