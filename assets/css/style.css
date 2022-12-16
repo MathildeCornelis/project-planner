@@ -70,6 +70,7 @@ body main {
   font-family: "Secular One", sans-serif;
 }
 body main #createTask {
+  z-index: 1;
   position: absolute;
   top: 40vw;
   right: 30vw;
