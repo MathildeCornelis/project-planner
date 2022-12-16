@@ -1,6 +1,14 @@
 //cacher et faire apparaitre l'éditeur de tâche
 document.getElementById('addtask').onclick = function createTask() {
-    document.querySelector('#createTask').style.display = 'flex';
+    let createTask = document.querySelector('#createTask')
+    
+    if ( createTask.style.display == 'none') {
+        createTask.style.display = 'flex'
+    }
+    else {
+        createTask.style.display = 'none'}
+  
+
 };
 document.getElementById('valid').onclick = function validTask() {
 document.querySelector('#createTask').style.display = 'none';

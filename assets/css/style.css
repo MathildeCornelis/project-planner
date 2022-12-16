@@ -7,7 +7,6 @@ body {
 }
 body header {
   grid-area: 1/1/2/2;
-  height: 1vh;
   display: grid;
   grid-template-columns: 20% 1fr 16%;
   grid-template-rows: 1fr;
@@ -22,9 +21,6 @@ body header h1 {
 }
 body header #trie {
   visibility: hidden;
-  z-index: 1;
-  margin-left: 2vw;
-  margin-top: 2vh;
 }
 body header #trie #aFaire {
   font-family: "Secular One", sans-serif;
@@ -75,7 +71,7 @@ body main {
 }
 body main #createTask {
   position: absolute;
-  top: 30vw;
+  top: 40vw;
   right: 30vw;
   left: 20vw;
   display: none;
@@ -116,14 +112,14 @@ body main #createTask .popUpTask #valid {
   background-color: #defcf9;
   font-family: "Secular One", sans-serif;
 }
-body main .tout {
-  margin-top: 25vw;
-}
 body main .tout .task {
   background-color: #fdffcd;
   border-radius: 25%;
   padding: 7vw;
   margin: 5vw;
+}
+body main .tout .task .description {
+  display: none;
 }
 body main .tout .task .delete {
   background-color: #fdffcd;

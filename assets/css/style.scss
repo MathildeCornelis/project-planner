@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&family=Unbounded:wght@700&display=swap');
+
+
 body {
     background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
     display: grid ;
@@ -7,18 +9,12 @@ body {
 
     header {
         grid-area: 1 / 1 / 2 / 2;
-        height: 1vh;
         display: grid;
         grid-template-columns: 20% 1fr 16%;
         grid-template-rows: 1fr;
         margin-bottom: 5vw;
-        
         z-index: 1;
 
-
-       
-     
-      
 
         h1 {
             grid-area: 1 / 2 / 2 / 3;
@@ -30,9 +26,7 @@ body {
 
         #trie { 
             visibility: hidden;
-            z-index: 1;
-           margin-left: 2vw;
-           margin-top: 2vh;
+        
 
             
             #aFaire {
@@ -100,7 +94,7 @@ body {
         font-family: 'Secular One' , sans-serif;
         #createTask {
             position: absolute;
-            top: 30vw;
+            top: 40vw;
             right: 30vw;
             left: 20vw;
             display: none;
@@ -152,13 +146,16 @@ body {
 
         .tout {
             
-            margin-top: 25vw;
             
             .task {
                 background-color: #fdffcd;
                 border-radius: 25%;
                 padding: 7vw;
                 margin: 5vw;
+
+                .description {
+                    display: none;
+                }
 
                 .delete {
                     background-color: #fdffcd ;
