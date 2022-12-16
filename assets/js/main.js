@@ -1,3 +1,38 @@
+// document.getElementsByClassName('arrow').onclick = function showDesc() {
+//     let desc = document.getElementsByClassName('description');
+    
+//     if ( desc.style.display == 'none') {
+//         desc.style.display = 'flex'
+//     }
+//     else {
+//         desc.style.display = 'none'
+//     };
+// };
+
+
+window.onload= function showDesc () {
+    
+    let click = document.getElementsByClassName('arrow');
+    for (let i = 0; i < click.length; i++){
+        let clicks  =  click[i];
+        clicks.onclick = function() {
+            let desc = document.getElementsByClassName('description');
+            for (let x=0; x < desc.length; x++){
+                console.log('test');
+                let descs = desc[x];
+                if(i == x) {
+                descs.style.display='flex'}
+                else if (i != x){
+                    descs.style.display='none'
+                }
+            }
+        }
+    }
+    setTimeout(showDesc, 10)
+}
+
+
+
 //cacher et faire apparaitre l'éditeur de tâche
 document.getElementById('addtask').onclick = function createTask() {
     let createTask = document.querySelector('#createTask')
@@ -7,15 +42,11 @@ document.getElementById('addtask').onclick = function createTask() {
     }
     else {
         createTask.style.display = 'none'}
-  
 
 };
 document.getElementById('valid').onclick = function validTask() {
 document.querySelector('#createTask').style.display = 'none';
 };
-
-
-
 
 
 //quand on valide, les values des inputs s'ajoutent à l'écran
@@ -109,8 +140,7 @@ document.querySelector('#createTask').style.display = 'none';
         
         // créer un id unique à div.task
         const uniqueId = divTask.setAttribute('id', Date.now());
-        constuniqueIdValue = uniqueId.value;
-        console.log('test');
+        
         }
     };
 

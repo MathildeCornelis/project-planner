@@ -26,20 +26,28 @@ body header #trie #aFaire {
   font-family: "Secular One", sans-serif;
   font-size: 5vw;
   width: 45vw;
-  border-top-left-radius: 35%;
-  border-top-right-radius: 35%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #fdffcd;
+  border: none;
+  border-bottom: solid 1px #b0afaf;
 }
 body header #trie #Fait {
   font-family: "Secular One", sans-serif;
   font-size: 5vw;
   width: 45vw;
+  background-color: #fdffcd;
+  border: none;
+  border-bottom: solid 1px #b0afaf;
 }
 body header #trie #Fini {
   font-family: "Secular One", sans-serif;
   font-size: 5vw;
   width: 45vw;
-  border-bottom-left-radius: 35%;
-  border-bottom-right-radius: 35%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #fdffcd;
+  border: none;
 }
 body header #filtre {
   grid-area: 1/1/2/2;
@@ -77,7 +85,7 @@ body main #createTask {
   left: 20vw;
   display: none;
   border: solid black 2px;
-  border-radius: 20%;
+  border-radius: 20px;
   box-shadow: 1vw 1vw 3vw 1vw #000000;
   justify-content: center;
   width: 60%;
@@ -95,27 +103,31 @@ body main #createTask .popUpTask #nom {
   height: 3vh;
   width: 40vw;
   font-family: "Secular One", sans-serif;
+  border: none;
 }
 body main #createTask .popUpTask #desc {
   width: 40vw;
   height: 10vh;
   font-family: "Secular One", sans-serif;
+  border: none;
 }
 body main #createTask .popUpTask #date {
   margin-top: 5vh;
   width: 40vw;
   margin-bottom: 5vh;
   font-family: "Secular One", sans-serif;
+  border: none;
 }
 body main #createTask .popUpTask #valid {
   width: 15vh;
   height: 6vw;
+  border-radius: 5px;
   background-color: #defcf9;
   font-family: "Secular One", sans-serif;
 }
 body main .tout .task {
   background-color: #fdffcd;
-  border-radius: 25%;
+  border-radius: 20px;
   padding: 7vw;
   margin: 5vw;
 }

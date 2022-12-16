@@ -26,29 +26,34 @@ body {
 
         #trie { 
             visibility: hidden;
-        
-
-            
             #aFaire {
                 font-family: 'Secular One' , sans-serif;
                 font-size: 5vw;
                 width: 45vw;
-                border-top-left-radius: 35%;
-                border-top-right-radius: 35%;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                background-color: #fdffcd ;
+                border: none;
+                border-bottom: solid 1px #b0afaf;
                 
               }
               #Fait {
                 font-family: 'Secular One' , sans-serif;
                 font-size: 5vw;
                 width: 45vw;
+                background-color: #fdffcd ;
+                border: none;
+                border-bottom: solid 1px #b0afaf;
                
               }
               #Fini {
                 font-family: 'Secular One' , sans-serif;
                 font-size: 5vw;
                 width: 45vw;
-                border-bottom-left-radius: 35%;
-                border-bottom-right-radius: 35%;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                background-color: #fdffcd ;
+                border: none;
                
               }
         }
@@ -100,7 +105,7 @@ body {
             left: 20vw;
             display: none;
             border: solid black 2px;
-            border-radius: 20%;
+            border-radius: 20px;
             box-shadow: 1vw 1vw 3vw 1vw #000000;
             justify-content: center;
             width: 60%;
@@ -112,6 +117,7 @@ body {
                 flex-direction: column;
                 align-items: center;
                 
+                
 
                 #nom {
                     margin-top: 2vh;
@@ -119,13 +125,14 @@ body {
                     height: 3vh;
                     width: 40vw;
                     font-family: 'Secular One' , sans-serif;
-                  
+                    border: none;
                 }
 
                 #desc {
                     width: 40vw ;
                     height: 10vh;
                     font-family: 'Secular One' , sans-serif;
+                    border: none;
                 }
 
                 #date {
@@ -133,11 +140,13 @@ body {
                     width: 40vw;
                     margin-bottom: 5vh;
                     font-family: 'Secular One' , sans-serif;
+                    border: none;
                 }
 
                 #valid {
                     width: 15vh;
                     height: 6vw;
+                    border-radius: 5px;
                     background-color: #defcf9;
                     font-family: 'Secular One' , sans-serif;
                     
@@ -150,10 +159,10 @@ body {
             
             .task {
                 background-color: #fdffcd;
-                border-radius: 25%;
+                border-radius: 20px;
                 padding: 7vw;
                 margin: 5vw;
-
+                
                 .description {
                     display: none;
                 }
@@ -181,6 +190,7 @@ body {
                     border: none;
                     width: 15%;
                     margin-left: 8vw;
+                    
                     
                     #plus {
                         width: 75%;
