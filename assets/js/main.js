@@ -10,26 +10,7 @@
 // };
 
 
-window.onload= function showDesc () {
-    
-    let click = document.getElementsByClassName('arrow');
-    for (let i = 0; i < click.length; i++){
-        let clicks  =  click[i];
-        clicks.onclick = function() {
-            let desc = document.getElementsByClassName('description');
-            for (let x=0; x < desc.length; x++){
-                console.log('test');
-                let descs = desc[x];
-                if(i == x) {
-                descs.style.display='flex'}
-                else if (i != x){
-                    descs.style.display='none'
-                }
-            }
-        }
-    }
-    setTimeout(showDesc, 10)
-}
+
 
 
 
@@ -245,6 +226,30 @@ document.getElementById('filtre').onclick = function createTask() {
     // let uniqueId = document.getElementById('id', Date.now());
     // console.log(uniqueId);
 
+
+    window.addEventListener('load', function showDesc () {
+    
+        let click = document.getElementsByClassName('arrow');
+        for (let i = 0; i < click.length; i++){
+            let clicks  =  click[i];
+            clicks.onclick = function() {
+                let desc = document.getElementsByClassName('description');
+                for (let x=0; x < desc.length; x++){
+                    console.log('test');
+                    let descs = desc[x];
+                    if(i == x) {
+                    descs.style.display='flex'}
+                    else if (i != x){
+                        descs.style.display='none'
+                    }
+                }
+            }
+        }
+        setTimeout(showDesc, 1000)
+    });
+
+
+
     window.onload= function del () {
         let click = document.getElementsByClassName('delete')
         for (let i = 0; i < click.length; i++){
@@ -256,17 +261,12 @@ document.getElementById('filtre').onclick = function createTask() {
             let removs = remov[x];
             
             if (i == x)
-            removs.style.display = 'none'
-        
-
+            removs.remove()
             }
-
-        
         }
-           
-
         }
-
-
+    
+    
         setTimeout(del , 1000)
     }
+    
